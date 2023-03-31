@@ -26,10 +26,12 @@ body{
 #mobile{
     display:block;
     width: 100%;
+    height: 100%;
 }
 #desktop{
     width: 100%;
     display: none;
+    height: 100%;
 }
 .price{
     display: flex;
