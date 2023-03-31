@@ -4,41 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+<title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<style>
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="image-section">
-      <img id='mobile'src="images/image-product-mobile.jpg" alt="">
-      <img id='desktop' src="images/image-product-desktop.jpg" alt="">
-    </div>
-    <div class="information-section">
-      <p id="product" class="for-margin">Perfume</p>
-      <p id="heading" class="for-margin">Gabrielle Essence Eau De Parfum</p>
-      <p id="description" class="for-margin">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-        Perfumer-Creator for the House of CHANEL.</p>
-      <div class="price for-margin">
-        <p id="price-now">$149.99</p>
-        <p id="price-before">$169.99</p>
+  <div id="box">
+    <div id="container">
+      <div id="result">
+        <h4 class="opac">Your Result</h4>
+        <div id="circle">
+            <div id="content">
+              <span id="score">76</span>
+              <p class="font-text">of 100</p>
+            </div>
+        </div>
+        <div id="description">
+          <h3 id="score-word">Great</h3>
+          <p class="font-text opac" id="criteria">You scored higher than 65% of the people who have taken these tests</p>
+        </div>
       </div>
-      <button><img src="images/icon-cart.svg"/> Add to card</button>
+      <div id="summary">
+        <h3>Summary</h3>
+        <ul>
+          <li class="stat" id="reaction"> <span class="wako-kasabot"> <img src="/assets/images/icon-reaction.svg" alt=""> Reaction</span><span><span  class="stat-num" id="reaction-score">80 </span><span class="opac">/ 100</span></span></li>
+          <li class="stat" id="memory"><span class="wako-kasabot"> <img src="/assets/images/icon-memory.svg" alt=""> Memory</span><span><span class="stat-num" id="memory-score">92 </span><span class="opac">/ 100</span></span></li>
+          <li class="stat" id="verbal"><span class="wako-kasabot"> <img src="/assets/images/icon-verbal.svg" alt=""> Verbal</span><span><span  class="stat-num" id="verbal-score">61 </span><span class="opac">/ 100</span></span></li>
+          <li class="stat" id="visual">
+            <span class="wako-kasabot"> <img src="/assets/images/icon-visual.svg" alt=""> Visual</span><span><span  class="stat-num" id="visual-score">72 </span><span class="opac">/ 100</span></span>
+          </li>
+        </ul>
+        <button class="font-text" onclick="someFunction()">Continue</button>
+      </div>
     </div>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Jurdel Gallano</a>.
   </div>
+  <script src="statgenerate.js"></script>
 </body>
 </html>
