@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;;
+}
+body{
+    font-size: 1.6rem;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    max-width: 100%;
+}
+.image-section , .information-section{
+    flex:1;
+}
+#mobile{
+    display:block;
+    width: 100%;
+}
+#desktop{
+    width: 100%;
+    display: none;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+    max-width: 100%;
+    
+}
+#price-now{
+    font-size: 2em;
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    margin-right: 0.5em;
+}
+#price-before{
+    align-self: center;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+.information-section{
+    padding:2em 1em;
+}
+.information-section>:not(#heading){
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 400;
+}
+#product-image{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+button{
+    width: 100%;
+    border-style: none;
+    background-color: hsl(158, 36%, 37%);
+    padding: 1em;
+    border-radius: 10px;
+    color:white;
+}
+button:hover{
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+#product{
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color:  hsl(228, 12%, 48%);
+    font-size: 0.8em;
+}
+#heading{
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+#description{
+    color: hsl(228, 12%, 48%);
+}
+.for-margin{
+    margin-bottom: 1em;
+}
+
+
+@media (min-width:576px){
+    body{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .container{
+        flex-direction: row;
+        max-width: 31.25em;
+        margin: auto;
+    }
+    .attribution{
+        position: absolute;
+        bottom: 1em;
+    }
+    #mobile{
+        display: none;
+    }
+    #desktop{
+        display: block;
+    }
+}
